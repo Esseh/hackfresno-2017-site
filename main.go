@@ -17,18 +17,31 @@ func init() {
 
 // Serves the index page.
 func index(res http.ResponseWriter, req *http.Request, p httprouter.Params) {
+	_, err := req.Cookie("login")
+	if err == nil {
+		http.Redirect(res, req, "app", http.StatusSeeOther)
+	}
 	TPL.ExecuteTemplate(res, "index", nil)
 }
 
 // Serves the index page.
 func login(res http.ResponseWriter, req *http.Request, p httprouter.Params) {
+	_, err := req.Cookie("login")
+	if err == nil {
+		http.Redirect(res, req, "app", http.StatusSeeOther)
+	}
 	TPL.ExecuteTemplate(res, "login", nil)
+}
+
+func app(res http.ResponseWriter, req *http.Request, p httprouter.Params) {
+	TPL.ExecuteTemplate(res, "app", nil)
 }
 
 func init() {
 	router := httprouter.New()
 	router.GET("/", index)
 	router.GET("/login", login)
+	router.GET("/app", app)
 	router.GET("/login/github/oauth/send", AUTH_OAUTH_GITHUB_Send)
 	router.GET("/login/github/oauth/recieve", AUTH_OAUTH_GITHUB_Recieve)
 	router.GET("/login/dropbox/oauth/send", AUTH_OAUTH_DROPBOX_Send)
