@@ -29,5 +29,9 @@ func init() {
 	router := httprouter.New()
 	router.GET("/", index)
 	router.GET("/login", login)
+	router.GET("/login/github/oauth/send", AUTH_OAUTH_GITHUB_Send)
+	router.GET("/login/github/oauth/recieve", AUTH_OAUTH_GITHUB_Recieve)
+	router.GET("/login/dropbox/oauth/send", AUTH_OAUTH_DROPBOX_Send)
+	router.GET("/login/dropbox/oauth/recieve", AUTH_OAUTH_DROPBOX_Recieve)
 	http.Handle("/", router)
 }
