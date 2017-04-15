@@ -25,13 +25,25 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<h1><span class="logo">{{template "logo"}}</span></h1>
+							<h1>
+								<span class="logo">{{template "logo"}}</span><span id="yell">{{template "deusvult"}}</span>
+								<button onclick="deusVult()"></button>
+								</h1>
 							<p>An application to help you communicate with groups, classmates, and friends.</p>
 							<ul class="actions">
 								<li><a href="/login" class="button scrolly">Get Started</a></li>
 							</ul>
 						</div>
 					</section>
+					<script>
+						function deusVult() {
+    					document.getElementById("yell").style.opacity = 1;
+							setTimeout(vultDeus, 1000);
+						}
+						function vultDeus(){
+							document.getElementById("yell").style.opacity = 0;
+						}
+					</script>
 
 
 				<!-- Two -->
