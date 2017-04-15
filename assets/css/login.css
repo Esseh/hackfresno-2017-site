@@ -1,0 +1,41 @@
+#intro p {
+    font-size: 2em;
+}
+
+main.css:1714
+p {
+    margin: 0 0 1em 0;
+}
+
+.actions img{
+  width: 75px;
+  height: 75px;
+}
+
+.actions li {
+    display: flex !important;
+    padding: 0 !important;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: solid 1px;
+    border-radius: 15px;
+    background-color: white;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+ul{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actions a{
+  border:none;
+}
+
+li:hover{
+box-shadow: 0 0 15px #232323;
+}
