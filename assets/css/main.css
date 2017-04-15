@@ -11,6 +11,8 @@ svg#Layer_1 {
 	position: relative;
 	bottom: 10px;
 	left: 2px;
+	width: 400px;
+height: 200px;
 }
 
 .inner h1 {
@@ -3270,27 +3272,27 @@ span.logo_text {
 		}
 
 		.wrapper.style1 {
-			background-color: #565656;
+			        background-color: rgb(31, 28, 37);
 		}
 
 		.wrapper.style1-alt {
-			    background-color: #522424;
+			        background-color: rgb(31, 28, 37);
 		}
 
 		.wrapper.style2 {
-			    background-color: #522424;
+			            background-color: rgb(31, 28, 37);
 		}
 
 		.wrapper.style2-alt {
-			background-color: #3e4094;
+			    background-color: rgb(31, 28, 37);
 		}
 
 		.wrapper.style3 {
-			    background-color: #522424;
+			    background-color: rgb(45, 40, 74);
 		}
 
 		.wrapper.style3-alt {
-			background-color: #953d75;
+			background-color: rgb(45, 40, 74);
 		}
 
 		.wrapper.fullscreen {
