@@ -90,7 +90,7 @@ div#wrapper {
 }
 
 section#messager {
-  padding: 1rem .5rem;
+  padding: 2rem 2rem;
   background: #242040;
   z-index: 9999;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -116,4 +116,11 @@ input[type="textarea"] {
     padding: 0 1em;
     text-decoration: none;
     width: 100%;
+}
+
+#sidebar nav > ul {
+    list-style: none;
+    max-height: 80%;
+    overflow-y: auto;
+    padding: 0;
 }
