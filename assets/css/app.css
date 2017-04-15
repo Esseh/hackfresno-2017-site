@@ -1,0 +1,126 @@
+#sidebar nav a {
+      text-align: left;
+      padding-left: 10% !important;
+
+}
+
+#sidebar{
+      position: initial;
+      width: 20em;
+      box-shadow: 1px 0 30px rgba(0, 0, 0, 0.61);
+}
+
+#sidebar > .inner {
+  min-height:0;
+}
+
+a:focus {
+    color: white !important;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+span.icon.fa-gear {
+    font-size: 1.5rem;
+    height: 0px;
+    bottom: 22px;
+    right: 10px;
+}
+
+#sidebar nav a {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-left: 10% !important;
+}
+
+input[type="text"]:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+input[type="text"] {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+#tabs li {
+  padding: 1rem !important;
+box-shadow: -20px 0 15px rgba(0, 0, 0, 0.09);
+width: 100%;
+display: flex;
+justify-content: center;
+padding: 0;
+}
+
+#tabs a {
+    width: 100%;
+    text-align: center;
+    border-bottom: none;
+}
+
+#tabs ul {
+    padding: 0rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+#tabs nav {
+    background: #2d2246;
+}
+
+#tabs {
+    width: 100%;
+}
+
+div#ui {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+div#wrapper {
+    background: rgba(255, 255, 255, 0.84);
+    z-index: -1;
+    position: absolute;
+    left: 17em;
+    height: 300%;
+    width: 80%;
+}
+
+section#messager {
+  padding: 2rem 2rem;
+  background: #242040;
+  z-index: 9999;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: block;
+  position: absolute;
+  top: 85%;
+  left: 16.9em;
+  height: 100%;
+  width: 65em;
+  border-radius: 0 10px 0 0;
+}
+
+input[type="textarea"] {
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.25em;
+    border: none;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0 1em;
+    text-decoration: none;
+    width: 100%;
+}
+
+#sidebar nav > ul {
+    list-style: none;
+    max-height: 80%;
+    overflow-y: auto;
+    padding: 0;
+}
