@@ -1,0 +1,12 @@
+application: hackfresno-164623
+version: 0
+runtime: go
+api_version: go1
+
+handlers:
+- url: /public
+  static_dir: public
+- url: /assets
+  static_dir: assets
+- url: /.*
+  script: _go_app
