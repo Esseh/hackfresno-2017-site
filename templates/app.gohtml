@@ -22,9 +22,9 @@
     <section id="sidebar">
 				<div class="inner">
 					<nav>
-            <a href="#create"><span class="icon fa-gear"></span>Create Group</a>
+            <a href="#create" onclick="newGroupPrompt()"><span class="icon fa-gear"></span>Create Group</a>
 						<ul id="innerSidebar">
-							<li><a href="#">Group 1</a></li>
+							<!-- <li><a href="#">Group 1</a></li>
 							<li><a href="#">Group 2</a></li>
 							<li><a href="#">Group 3</a></li>
 							<li><a href="#">Group 1</a></li>
@@ -35,23 +35,23 @@
 							<li><a href="#">Group 3</a></li>
 							<li><a href="#">Group 1</a></li>
 							<li><a href="#">Group 2</a></li>
-							<li><a href="#">Group 3</a></li>
+							<li><a href="#">Group 3</a></li> -->
 						</ul>
 					</nav>
 				</div>
         <div class="search">
-          <input type="text" name="search" placeholder="Search..">
+			<input id="sideBarSearch" onkeypress="return searchTrigger(event)" type="text" name="search" placeholder="Search..">
         </div>
 			</section>
 
       <section id="tabs">
-        <div class="inner">
+        <div class="inner" id="postDiv">
 					<nav>
 						<ul>
-							<li><a href="#tab1">Open Discussion</a></li>
-							<li><a href="#tab2">Threads</a></li>
-							<li><a href="#tab3">Events</a></li>
-							<li><a href="#tab4">Info</a></li>
+							<li onclick='openDiscussionTrigger()'><a href="#tab1">Open Discussion</a></li>
+							<!-- <li onclick='threadsTrigger()'><a href="#tab2">Threads</a></li> -->
+							<li onclick='eventsTrigger()'><a href="#tab3">Events</a></li>
+							<li onclick='infoTrigger()'><a href="#tab4">Info</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -59,14 +59,15 @@
 
       <section id="messager">
         <div class="inner">
-					<textarea id="submissionArea" rows="1" cols="50">Hello World!...</textarea>
+					<textarea onkeypress="return submitTrigger(event)" id="submissionArea" rows="1" cols="50">Hello World!...</textarea>
 				</div>
       </section>
 
     </div>
     <div id="wrapper">
       <div id="channel">
-        <ul>
+        <ul id="postList">
+		<!--
           <li>
             <span class="username">Bot: </span>
             <span class="usermessage">Welcome to Open Discussion!</span>
@@ -93,6 +94,7 @@
             <span class="username">Erich: </span>
             <span class="usermessage">Wow!</span>
           </li>
+		  -->
         </ul>
       </div>
     </div>
