@@ -17,8 +17,8 @@ func init() {
 	github.Config.ClientID = "e0297346f88565c9f443"
 	github.Config.SecretID = "7dd96d4a262a004aeffefe4b0af1a38e03b38d14"
 	github.Config.Redirect = "http://localhost:8080/login/github/oauth/recieve"
-	dropbox.Config.ClientID = "ddhu8e7nswl56yt"
-	dropbox.Config.SecretID = "387kru0n9nb0qkk"
+	dropbox.Config.ClientID = "1bf8nikxp0a81nx"
+	dropbox.Config.SecretID = "f64mdz670n26kqn"
 	dropbox.Config.Redirect = "http://localhost:8080/login/dropbox/oauth/recieve"
 }
 
