@@ -158,7 +158,6 @@ div#createBox {
     padding: 1rem;
     z-index: 10001;
     position: absolute;
-    height: 30em;
     width: 40em;
     left: 20em;
     top: 5em;
@@ -172,7 +171,6 @@ div#eventBox {
     padding: 1rem;
     z-index: 10001;
     position: absolute;
-    height: 30em;
     width: 40em;
     left: 20em;
     top: 5em;
@@ -208,7 +206,6 @@ div#searchBox {
     padding: 1rem;
     z-index: 10001;
     position: absolute;
-    height: 30em;
     width: 40em;
     left: 20em;
     top: 5em;
@@ -221,4 +218,22 @@ div#searchBox {
 .search {
     display: flex;
     justify-content: center;
+}
+
+#createBox h1 {
+    font-size: 1.4rem;
+    padding: 5px 0 0 15px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+}
+
+#searchBox h1 {
+    font-size: 1.4rem;
+    padding: 5px 0 0 15px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+}
+
+#eventBox h1 {
+    font-size: 1.4rem;
+    padding: 5px 0 0 15px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
 }
