@@ -85,7 +85,7 @@ div#wrapper {
     background: rgba(255, 255, 255, 0.84);
     z-index: -1;
     position: absolute;
-    left: 17em;
+    left: 15em;
     width: 80%;
     display:none;
 }
@@ -98,7 +98,7 @@ section#messager {
   display: none;
   position: absolute;
   top: 85%;
-  left: 16.9em;
+  left: 15.9em;
   height: 100%;
   width: 65em;
   border-radius: 0 10px 0 0;

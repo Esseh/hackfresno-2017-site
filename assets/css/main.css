@@ -594,220 +594,6 @@ span.logo_text {
 
 	}
 
-	@media screen and (max-width: 1280px) {
-
-		.row > * {
-			padding: 0 0 0 1.5em;
-		}
-
-		.row {
-			margin: 0 0 -1px -1.5em;
-		}
-
-		.row.uniform > * {
-			padding: 1.5em 0 0 1.5em;
-		}
-
-		.row.uniform {
-			margin: -1.5em 0 -1px -1.5em;
-		}
-
-		.row.\32 00\25 > * {
-			padding: 0 0 0 3em;
-		}
-
-		.row.\32 00\25 {
-			margin: 0 0 -1px -3em;
-		}
-
-		.row.uniform.\32 00\25 > * {
-			padding: 3em 0 0 3em;
-		}
-
-		.row.uniform.\32 00\25 {
-			margin: -3em 0 -1px -3em;
-		}
-
-		.row.\31 50\25 > * {
-			padding: 0 0 0 2.25em;
-		}
-
-		.row.\31 50\25 {
-			margin: 0 0 -1px -2.25em;
-		}
-
-		.row.uniform.\31 50\25 > * {
-			padding: 2.25em 0 0 2.25em;
-		}
-
-		.row.uniform.\31 50\25 {
-			margin: -2.25em 0 -1px -2.25em;
-		}
-
-		.row.\35 0\25 > * {
-			padding: 0 0 0 0.75em;
-		}
-
-		.row.\35 0\25 {
-			margin: 0 0 -1px -0.75em;
-		}
-
-		.row.uniform.\35 0\25 > * {
-			padding: 0.75em 0 0 0.75em;
-		}
-
-		.row.uniform.\35 0\25 {
-			margin: -0.75em 0 -1px -0.75em;
-		}
-
-		.row.\32 5\25 > * {
-			padding: 0 0 0 0.375em;
-		}
-
-		.row.\32 5\25 {
-			margin: 0 0 -1px -0.375em;
-		}
-
-		.row.uniform.\32 5\25 > * {
-			padding: 0.375em 0 0 0.375em;
-		}
-
-		.row.uniform.\32 5\25 {
-			margin: -0.375em 0 -1px -0.375em;
-		}
-
-		.\31 2u\28large\29, .\31 2u\24\28large\29 {
-			width: 100%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\31 1u\28large\29, .\31 1u\24\28large\29 {
-			width: 91.6666666667%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\31 0u\28large\29, .\31 0u\24\28large\29 {
-			width: 83.3333333333%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\39 u\28large\29, .\39 u\24\28large\29 {
-			width: 75%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\38 u\28large\29, .\38 u\24\28large\29 {
-			width: 66.6666666667%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\37 u\28large\29, .\37 u\24\28large\29 {
-			width: 58.3333333333%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\36 u\28large\29, .\36 u\24\28large\29 {
-			width: 50%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\35 u\28large\29, .\35 u\24\28large\29 {
-			width: 41.6666666667%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\34 u\28large\29, .\34 u\24\28large\29 {
-			width: 33.3333333333%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\33 u\28large\29, .\33 u\24\28large\29 {
-			width: 25%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\32 u\28large\29, .\32 u\24\28large\29 {
-			width: 16.6666666667%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\31 u\28large\29, .\31 u\24\28large\29 {
-			width: 8.3333333333%;
-			clear: none;
-			margin-left: 0;
-		}
-
-		.\31 2u\24\28large\29 + *,
-		.\31 1u\24\28large\29 + *,
-		.\31 0u\24\28large\29 + *,
-		.\39 u\24\28large\29 + *,
-		.\38 u\24\28large\29 + *,
-		.\37 u\24\28large\29 + *,
-		.\36 u\24\28large\29 + *,
-		.\35 u\24\28large\29 + *,
-		.\34 u\24\28large\29 + *,
-		.\33 u\24\28large\29 + *,
-		.\32 u\24\28large\29 + *,
-		.\31 u\24\28large\29 + * {
-			clear: left;
-		}
-
-		.\-11u\28large\29 {
-			margin-left: 91.66667%;
-		}
-
-		.\-10u\28large\29 {
-			margin-left: 83.33333%;
-		}
-
-		.\-9u\28large\29 {
-			margin-left: 75%;
-		}
-
-		.\-8u\28large\29 {
-			margin-left: 66.66667%;
-		}
-
-		.\-7u\28large\29 {
-			margin-left: 58.33333%;
-		}
-
-		.\-6u\28large\29 {
-			margin-left: 50%;
-		}
-
-		.\-5u\28large\29 {
-			margin-left: 41.66667%;
-		}
-
-		.\-4u\28large\29 {
-			margin-left: 33.33333%;
-		}
-
-		.\-3u\28large\29 {
-			margin-left: 25%;
-		}
-
-		.\-2u\28large\29 {
-			margin-left: 16.66667%;
-		}
-
-		.\-1u\28large\29 {
-			margin-left: 8.33333%;
-		}
-
-	}
 
 	@media screen and (max-width: 980px) {
 
@@ -1720,13 +1506,7 @@ span.logo_text {
 
 		}
 
-		@media screen and (max-width: 1280px) {
 
-			body, input, select, textarea {
-				font-size: 12pt;
-			}
-
-		}
 
 		@media screen and (max-width: 360px) {
 
@@ -3298,13 +3078,7 @@ span.logo_text {
 
 			}
 
-			@media screen and (max-width: 1280px) {
 
-				.wrapper > .inner {
-					width: 100%;
-				}
-
-			}
 
 			@media screen and (max-width: 736px) {
 
@@ -3362,17 +3136,7 @@ span.logo_text {
 				height: 100vh;
 			}
 
-			@media screen and (max-width: 1280px) {
 
-				.wrapper.fullscreen {
-					min-height: calc(100vh - 2.5em);
-				}
-
-					body.is-ie .wrapper.fullscreen {
-						height: calc(100vh - 2.5em);
-					}
-
-			}
 
 			@media screen and (max-width: 736px) {
 
@@ -3545,14 +3309,7 @@ span.logo_text {
 		margin-left: 18em;
 	}
 
-		@media screen and (max-width: 1280px) {
 
-			#sidebar + #wrapper {
-				margin-left: 0;
-				padding-top: 3.5em;
-			}
-
-		}
 
 		@media screen and (max-width: 736px) {
 
@@ -3572,13 +3329,7 @@ span.logo_text {
 		margin-left: 18em;
 	}
 
-		@media screen and (max-width: 1280px) {
 
-			#sidebar + #wrapper + #footer {
-				margin-left: 0;
-			}
-
-		}
 
 	#footer > .inner a {
 		border-bottom-color: rgba(255, 255, 255, 0.15);
@@ -3877,67 +3628,7 @@ span.logo_text {
 			opacity: 0;
 		}
 
-		@media screen and (max-width: 1280px) {
 
-			#sidebar {
-				height: 3.5em;
-				left: 0;
-				line-height: 3.5em;
-				overflow: hidden;
-				padding: 0;
-				text-align: center;
-				top: 0;
-				width: 100%;
-			}
-
-				#sidebar > .inner {
-					-moz-flex-direction: row;
-					-webkit-flex-direction: row;
-					-ms-flex-direction: row;
-					flex-direction: row;
-					-moz-align-items: stretch;
-					-webkit-align-items: stretch;
-					-ms-align-items: stretch;
-					align-items: stretch;
-					height: inherit;
-					line-height: inherit;
-				}
-
-				#sidebar nav {
-					height: inherit;
-					line-height: inherit;
-				}
-
-					#sidebar nav ul {
-						display: -moz-flex;
-						display: -webkit-flex;
-						display: -ms-flex;
-						display: flex;
-						height: inherit;
-						line-height: inherit;
-						margin: 0;
-					}
-
-						#sidebar nav ul li {
-							display: block;
-							height: inherit;
-							line-height: inherit;
-							margin: 0 0 0 2em;
-							padding: 0;
-						}
-
-					#sidebar nav a {
-						height: inherit;
-						line-height: inherit;
-						padding: 0;
-					}
-
-						#sidebar nav a:after {
-							background-image: none;
-							background-color: #b74e91;
-						}
-
-		}
 
 		@media screen and (max-width: 736px) {
 
@@ -3979,10 +3670,4 @@ background: url(images/bgtr.svg) top right no-repeat, url(images/bgbl.svg) botto
 
 			}
 
-		@media screen and (max-width: 1280px) {
-
-			#intro {
-				background-attachment: scroll;
-			}
-
-		}
+		
