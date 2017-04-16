@@ -15,6 +15,53 @@ svg#Layer_1 {
 height: 200px;
 }
 
+#intro p {
+    margin: 0 0 2em 0;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.19);
+}
+
+g#deusvult {
+    cursor: pointer;
+}
+
+#yell{
+	transition: opacity 0.2s ease-in-out;
+	opacity: 0;
+}
+
+#yell svg#Layer_1 {
+    left: 175px;
+    bottom: 70px;
+    width: 100px;
+    height: 100px;
+}
+
+h1 button {
+	z-index:1000;
+	cursor:pointer;
+    border: none !important;
+    position: absolute;
+    right: 340px;
+    width: 75px;
+    height: 150px;
+    padding: 0;
+		transition: initial;
+		-webkit-transition: initial;
+}
+
+h1 button:after{
+	transition: initial;
+	-webkit-transition: initial;
+}
+h1 button:hover {
+    opacity: 0;
+}
+
+span#yell {
+    position: absolute;
+}
+
 .inner h1 {
     display: flex;
     align-items: center;
@@ -3904,8 +3951,9 @@ span.logo_text {
 
 	#intro {
 		align-items: center;
-		background-attachment: fixed;
-		background-image: url("images/intro.svg");
+background-attachment: fixed;
+background: url(images/bgtr.svg) top right no-repeat, url(images/bgbl.svg) bottom left no-repeat, url(images/bgbl.svg) bottom left no-repeat, url(images/overlay.png), linear-gradient(45deg, #482154, #b6b2ec, #3d2773);
+}}
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
