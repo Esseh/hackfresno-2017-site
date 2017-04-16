@@ -6,6 +6,7 @@ var SidebarMode = "";	        // MyGroups | SearchGroups
 var ActionData = "";            // contains Metadata to be processed by controller
 var ID_OF_DISCUSSION = 0;
 var ID_OF_GROUP = 0;
+var fadeSpeed = 200;
 
 setInterval(function View(){
 	if(ViewIsActive){
@@ -14,13 +15,13 @@ setInterval(function View(){
 			if(LastModified != TimeDelta){
 				console.log(`ViewMode = `,ViewMode);
 				LastModified = TimeDelta;
-				if(ViewMode == "about"){ updateAbout(); } 
-				if(ViewMode == "events"){updateEvents();} 
-				if(ViewMode == "threads"){ updateThreads(); } 
-				if(ViewMode == "thread"){ updatePosts(); } 
-				if(ViewMode == "discussion"){ updateDiscussion(); } 
+				if(ViewMode == "about"){ updateAbout(); }
+				if(ViewMode == "events"){updateEvents();}
+				if(ViewMode == "threads"){ updateThreads(); }
+				if(ViewMode == "thread"){ updatePosts(); }
+				if(ViewMode == "discussion"){ updateDiscussion(); }
 			}
-		});	
+		});
 	}
 },1500);
 
@@ -53,7 +54,7 @@ function makePost(){
 function makeDiscussionPost(){
 	var action = ActionData;
 	ActionData = "";
-	$.post('/api/controller', { groupID: ID_OF_GROUP, control: "makeDiscussionPost", post: action, discussionID: ID_OF_GROUP });		
+	$.post('/api/controller', { groupID: ID_OF_GROUP, control: "makeDiscussionPost", post: action, discussionID: ID_OF_GROUP });
 }
 
 // Occurs After Making New Thread in Threads
@@ -103,17 +104,20 @@ function addGroup(){
 	var action = ActionData;
 	ActionData = "";
 	$.post('/api/addgroup', { id: action },function(){
-		PendingAction = "MyGroups";			
-	});		
+		PendingAction = "MyGroups";
+	});
 }
 
 // Occurs After clicking group in MyGroups mode
 function loadGroup(){
+	document.getElementById("tabs").style.display = "initial";
+	document.getElementById("messager").style.display = "initial";
+	document.getElementById("wrapper").style.display = "initial";
 	var action = ActionData;
 	ActionData = "";
 	LastModified = 0;
 	ViewIsActive = true;
-	ID_OF_GROUP = parseInt(action,10); 
+	ID_OF_GROUP = parseInt(action,10);
 	ViewMode = "discussion";
 }
 
@@ -191,7 +195,7 @@ function updateEvents(){
 				responseHTML += "</li>"
 			}
 			document.getElementById("postList").innerHTML = responseHTML;
-			window.scrollTo(0,document.body.scrollHeight);	
+			window.scrollTo(0,document.body.scrollHeight);
 			clearInterval(timer);
 		}
 	},100);
@@ -214,29 +218,71 @@ function updateThreads(){
 			responseHTML += '</a>';
 		}
 		document.getElementById("postList").innerHTML = responseHTML;
-		window.scrollTo(0,document.body.scrollHeight);	
+		window.scrollTo(0,document.body.scrollHeight);
 	})
 }
 
 function updatePosts(){
-	
+
 }
 
 function newGroupPrompt(){
-	ActionData = prompt("What will your group be named?");
-	ActionData += "," + prompt("Which univeristy?");
-	ActionData += "," + prompt("Which field of study?");
-	ActionData += "," + prompt("Which subject?");
-	ActionData += "," + prompt("Anything else about the group?");
-	PendingAction = "CreateGroup";
+		$("#createBox").fadeToggle(fadeSpeed);
+		$("#screen").fadeToggle(fadeSpeed);
 }
 
-function searchTrigger(e){
-	if(e.keyCode == 13){
-		ActionData = document.getElementById("sideBarSearch").value;
-		document.getElementById("sideBarSearch").value = "";
-		PendingAction = "FindGroups";	
+
+function submitGroupPrompt(){
+	if(document.getElementById("create1").value == "")
+	{
+		return
 	}
+	ActionData = document.getElementById("create1").value;
+	document.getElementById("create1").value = "";
+	ActionData += "," + document.getElementById("create2").value;
+	document.getElementById("create2").value = "";
+	ActionData += "," + document.getElementById("create3").value;
+	document.getElementById("create3").value = "";
+	ActionData += "," + document.getElementById("create4").value;
+	document.getElementById("create4").value = "";
+	ActionData += "," + document.getElementById("create5").value;
+	document.getElementById("create5").value = "";
+	newGroupPrompt();
+
+	PendingAction = "CreateGroup"
+}
+
+function submitEventPrompt(){
+	if(document.getElementById("eventTitle").value == "")
+	{
+		return
+	}
+	ActionData = document.getElementById("eventTitle").value;
+	document.getElementById("eventTitle").value = "";
+	ActionData += "," + document.getElementById("event1").value;
+	document.getElementById("event1").value = "";
+	ActionData += "," + document.getElementById("event2").value;
+	document.getElementById("event2").value = "";
+	ActionData += "," + document.getElementById("event3").value;
+	document.getElementById("event3").value = "";
+	PendingAction = "MakeEvent";
+	$("#eventBox").fadeToggle(fadeSpeed);
+	$("#screen").fadeToggle(fadeSpeed);
+}
+
+function searchTrigger(){
+		if((document.getElementById("search1").value != "") || (document.getElementById("search2").value != "") || (document.getElementById("search3").value != ""))
+		{
+		ActionData = document.getElementById("search1").value;
+		document.getElementById("search1").value = "";
+		ActionData += "," + document.getElementById("search2").value;
+		document.getElementById("search2").value = "";
+		ActionData += "," + document.getElementById("search3").value;
+		document.getElementById("search3").value = "";
+		PendingAction = "FindGroups";
+		searchFade();
+		}
+		else{ return;}
 }
 
 function submitTrigger(e){
@@ -244,7 +290,7 @@ function submitTrigger(e){
 		if(ViewMode == "discussion"){
 			ActionData = document.getElementById("submissionArea").value;
 			document.getElementById("submissionArea").value = "";
-			PendingAction = "MakeDiscussionPost";	
+			PendingAction = "MakeDiscussionPost";
 		}
 		if(ViewMode == "threads"){
 			ActionData = document.getElementById("submissionArea").value;
@@ -255,24 +301,36 @@ function submitTrigger(e){
 			// TODO
 		}
 		if(ViewMode == "events"){
-			ActionData = document.getElementById("submissionArea").value;
+			$("#eventBox").fadeToggle(fadeSpeed);
+			$("#screen").fadeToggle(fadeSpeed);
+			document.getElementById("eventTitle").value = document.getElementById("submissionArea").value;
 			document.getElementById("submissionArea").value = "";
-			ActionData += "," + prompt("Describe The Event Taking Place...");
-			ActionData += "," + prompt("When will the event happen?");
-			ActionData += "," + prompt("Where will the event occur?");
-			PendingAction = "MakeEvent";
+			//ActionData += "," + prompt("Describe The Event Taking Place...");
+			//ActionData += "," + prompt("When will the event happen?");
+			//ActionData += "," + prompt("Where will the event occur?");
+			//PendingAction = "MakeEvent";
 		}
 	}
 }
 
-function addGroupTrigger(e){ 
+function eventFadeOut(){
+	$("#eventBox").fadeToggle(fadeSpeed);
+	$("#screen").fadeToggle(fadeSpeed);
+}
+
+function searchFade(){
+	$("#searchBox").fadeToggle(fadeSpeed);
+	$("#screen").fadeToggle(fadeSpeed);
+}
+
+function addGroupTrigger(e){
 	ActionData = (e.target.parentNode.id)
-	ActionData = ActionData.substring(2,ActionData.length); 
+	ActionData = ActionData.substring(2,ActionData.length);
 	PendingAction = "AddGroup";
 }
 function loadGroupTrigger(e){
 	ActionData = (e.target.parentNode.id)
-	ActionData = ActionData.substring(2,ActionData.length); 
+	ActionData = ActionData.substring(2,ActionData.length);
 	PendingAction = "LoadGroup";
 }
 

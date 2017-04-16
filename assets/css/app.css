@@ -71,6 +71,7 @@ padding: 0;
 
 #tabs {
     width: 100%;
+    display:none;
 }
 
 div#ui {
@@ -86,6 +87,7 @@ div#wrapper {
     position: absolute;
     left: 17em;
     width: 80%;
+    display:none;
 }
 
 section#messager {
@@ -93,7 +95,7 @@ section#messager {
   background: #242040;
   z-index: 9999;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  display: block;
+  display: none;
   position: absolute;
   top: 85%;
   left: 16.9em;
@@ -150,4 +152,73 @@ ul li {
 
 span.usermessage {
     padding-left: 1rem;
+}
+
+div#createBox {
+    padding: 1rem;
+    z-index: 10001;
+    position: absolute;
+    height: 30em;
+    width: 40em;
+    left: 20em;
+    top: 5em;
+    display:none;
+    background: #2d2246;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.32);
+}
+
+div#eventBox {
+    padding: 1rem;
+    z-index: 10001;
+    position: absolute;
+    height: 30em;
+    width: 40em;
+    left: 20em;
+    top: 5em;
+    display:none;
+    transition: opacity .2s ease-in-out;
+    background: #2d2246;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.32);
+}
+
+#createBox input {
+    margin: 0 0 1rem 0;
+}
+
+#eventBox input {
+    margin: 0 0 1rem 0;
+}
+
+div#screen {
+    display:none;
+    position: absolute;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#searchBox input {
+    margin: 0 0 1rem 0;
+}
+
+div#searchBox {
+    padding: 1rem;
+    z-index: 10001;
+    position: absolute;
+    height: 30em;
+    width: 40em;
+    left: 20em;
+    top: 5em;
+    display: none;
+    background: #2d2246;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.32);
+}
+
+.search {
+    display: flex;
+    justify-content: center;
 }
